@@ -1,0 +1,53 @@
+/* Template de postagem Nara — Forumeiros
+   Cole este arquivo em Visualização > Imagens e Cores > Cores > Folha de estilo CSS.
+   O HTML do post usa somente classes próprias e <details>/<summary>. */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Noto+Serif+JP:wght@400;600;700&display=swap');
+
+.nara-post {
+  --nara-ink: #e8e5d9;
+  --nara-muted: #aaa99b;
+  --nara-moss: #9ba386;
+  --nara-line: #41453b;
+  --nara-panel: #171916;
+  box-sizing: border-box;
+  max-width: 680px;
+  margin: 20px auto !important;
+  overflow: hidden;
+  color: var(--nara-ink);
+  background: #111310;
+  border: 1px solid var(--nara-line);
+  box-shadow: 0 12px 35px #0008;
+  font: 15px/1.85 'IM Fell English', Georgia, serif;
+}
+.nara-post *, .nara-post *::before, .nara-post *::after { box-sizing: border-box; }
+.nara-post__header { padding: 25px 30px 20px; text-align: center; background: linear-gradient(145deg,#292d23,#151812 72%); border-bottom: 1px solid var(--nara-line); }
+.nara-post__location, .nara-label { color: var(--nara-moss); font: 11px/1.5 'Noto Serif JP',serif; letter-spacing: 2px; text-transform: uppercase; }
+.nara-post__title { margin: 7px 0 0 !important; padding: 0 !important; color: #f0ead7 !important; background: none !important; border: 0 !important; font: 600 34px/1.2 'Noto Serif JP',serif !important; letter-spacing: 2px; }
+.nara-post__subtitle { margin: 8px 0 0; color: var(--nara-muted); font-size: 13px; letter-spacing: 1px; }
+.nara-post__subtitle span { padding: 0 7px; color: var(--nara-moss); }
+.nara-post__cover { position: relative; height: 245px; overflow: hidden; background: #252820; }
+.nara-post__cover img { display: block; width: 100% !important; height: 100%; max-height: none !important; object-fit: cover; opacity: .78; }
+.nara-post__cover-caption { position: absolute; right: 14px; bottom: 12px; padding: 4px 9px; color: #eee9d7; background: #10120fbd; font-size: 12px; letter-spacing: 1px; }
+.nara-post__status { display: flex; justify-content: space-around; gap: 12px; padding: 14px 20px; background: #1b1e19; border-bottom: 1px solid var(--nara-line); }
+.nara-post__status div, .nara-post__grid div { display: flex; flex-direction: column; text-align: center; }
+.nara-post__status strong, .nara-post__grid strong { color: var(--nara-ink); font: 600 13px 'Noto Serif JP',serif; }
+.nara-post__body { padding: 27px clamp(22px,7vw, fiftypx); padding-left: clamp(22px,7vw,50px); padding-right: clamp(22px,7vw,50px); text-align: justify; }
+.nara-post__body p { margin: 0 0 16px; }
+.nara-post__lead { color: #d0cba9; font-size: 17px; font-style: italic; }
+.nara-post__body blockquote { margin: 22px 0; padding: 8px 18px; color: #c2c39b; border-left: 2px solid var(--nara-moss); font-size: 18px; font-style: italic; }
+.nara-post__details { border-top: 1px solid var(--nara-line); background: var(--nara-panel); }
+.nara-post__details summary { display: flex; align-items: center; gap: 10px; padding: 13px 20px; color: var(--nara-ink); cursor: pointer; list-style: none; font: 600 13px 'Noto Serif JP',serif; letter-spacing: 1px; }
+.nara-post__details summary::-webkit-details-marker { display:none; }
+.nara-post__seal { color: var(--nara-moss); font-size: 18px; }
+.nara-post__toggle { margin-left: auto; color: var(--nara-moss); }
+.nara-post__details[open] .nara-post__toggle { transform: rotate(45deg); }
+.nara-post__details-content { padding: 4px 22px 22px; color: var(--nara-muted); }
+.nara-post__grid { display: grid; grid-template-columns: repeat(3,1fr); margin: 8px 0 20px; border: 1px solid var(--nara-line); }
+.nara-post__grid div { gap: 5px; padding: 11px 6px; }
+.nara-post__grid div + div { border-left: 1px solid var(--nara-line); }
+.nara-post__details-content h2 { margin: 14px 0 7px; color: var(--nara-moss); font: 600 13px 'Noto Serif JP',serif; letter-spacing: 2px; text-transform: uppercase; }
+.nara-post__details-content p { margin: 0; }
+.nara-post__footer { display: flex; justify-content: space-between; gap: 10px; padding: 13px 20px; color: var(--nara-muted); background: linear-gradient(145deg,#24281f,#141611); border-top: 1px solid var(--nara-line); font: 11px 'Noto Serif JP',serif; letter-spacing: 1px; }
+.nara-post__footer span:first-child { color: #e2ddc8; text-transform: uppercase; }
+@media (max-width: 520px) { .nara-post__header { padding: 21px 15px; } .nara-post__title { font-size: 27px !important; } .nara-post__cover { height: 190px; } .nara-post__status { gap: 6px; padding: 12px 8px; } .nara-post__status .nara-label { font-size: 9px; letter-spacing: 1px; } .nara-post__status strong { font-size: 11px; } .nara-post__footer { flex-direction: column; text-align: center; } }
+
